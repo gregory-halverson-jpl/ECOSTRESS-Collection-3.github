@@ -36,7 +36,7 @@ There are several supporting sub-components in generalized Julia packages, inclu
 - [HLS.jl](https://github.com/STARS-Data-Fusion/HLS.jl) for searching and downloading the Harmonized Landsat Sentinel (HLS) dataset
 - [VNP43NRT.jl](https://github.com/STARS-Data-Fusion/VNP43NRT.jl) for Bidirectional Reflectance Distribution Function (BRDF)
 
-#### Cloud-Optimized GeoTIFF Orbit/Scene/Tile Format
+## Cloud-Optimized GeoTIFF Orbit/Scene/Tile Format
 
 All ECOSTRESS tiled products are stored in the Geographic Tagged Image File Format (GeoTIFF). GeoTIFF is a general purpose file format and programming library for storing scientific data. The GeoTIFF format was originally created by Dr. Niles Ritter with the Open Geospatial Consortium publishing the OGC GeoTIFF standard, which defines the GeoTIFF by specifying requirements and encoding rules for using the Tagged Image File Format (TIFF) for the exchange of georeferenced or geocoded image data. The following sections provide some key elements of GeoTIFF that will be employed in ECOSTRESS data products. 
 
@@ -50,11 +50,11 @@ Each ECOSTRESS tiled product in COG format will contain a standard metadata grou
 
 Complete documentation of the GeoTIFF structure and application software can be found at https://www.ogc.org/standard/geotiff/.
 
-### Quality Flags
+## Quality Flags
 
 Two high-level quality flags are provided in all gridded and tiled products as thematic/binary masks encoded to zero and one in unsigned 8-bit integer layers. The cloud layer represents the final cloud test from L2 CLOUD. The water layer represents the surface water body in the Shuttle Radar Topography Mission (SRTM) Digital Elevation Model. For both layers, zero means absence, and one means presence. Pixels with the value 1 in the cloud layer represent detection of cloud in that pixel. Pixels with the value 1 in the water layer represent open water surface in that pixel. All tiled product data layers written in `float32` contain a standard not-a-number (`NaN`) value at each pixel that could not be retrieved. The cloud and water layers are provided to explain these missing values.
 
-### Standard Metadata 
+## Standard Metadata 
 
 | **Name** | **Type** | **Size** | **Example** |
 | --- | --- | --- | --- |
@@ -109,7 +109,7 @@ Two high-level quality flags are provided in all gridded and tiled products as t
 
 *Table 3. Standard metadata included in SBG-TIR product files*
 
-### Appendix of Abbreviations and Acronyms
+## Appendix of Abbreviations and Acronyms
 
 | **Abbreviatios** | **Description** |
 | --- | --- |
