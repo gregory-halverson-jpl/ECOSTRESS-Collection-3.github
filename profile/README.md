@@ -4,6 +4,8 @@ This organization contains the algorithms for the ECOsystem Spaceborne Thermal R
 
 This document will provide background information relevant to the ECOSTRESS mission and data products. 
 
+## ECOSTRESS Data Product Algorithms
+
 The ECOSTRESS data product algorithms include:
 - [Level 1 Radiance](https://github.com/ECOSTRESS-Collection-3/ECOv003-L1-RAD)
 - [Level 2 Surface Temperature](https://github.com/ECOSTRESS-Collection-3/ECOv003-L2-LSTE)
