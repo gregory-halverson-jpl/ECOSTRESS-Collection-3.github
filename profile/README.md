@@ -47,3 +47,186 @@ Each `.tif` COG data layer in each L2T/L3T/L4T product additionally contains a r
 Each ECOSTRESS tiled product in COG format will contain a standard metadata group that specifies the same type of contents for all products, and a product specific metadata group that specifies those metadata elements that are useful for defining attributes of the product data.  
 
 Complete documentation of the GeoTIFF structure and application software can be found at https://www.ogc.org/standard/geotiff/.
+
+### Quality Flags
+
+Two high-level quality flags are provided in all gridded and tiled products as thematic/binary masks encoded to zero and one in unsigned 8-bit integer layers. The cloud layer represents the final cloud test from L2 CLOUD. The water layer represents the surface water body in the Shuttle Radar Topography Mission (SRTM) Digital Elevation Model. For both layers, zero means absence, and one means presence. Pixels with the value 1 in the cloud layer represent detection of cloud in that pixel. Pixels with the value 1 in the water layer represent open water surface in that pixel. All tiled product data layers written in `float32` contain a standard not-a-number (`NaN`) value at each pixel that could not be retrieved. The cloud and water layers are provided to explain these missing values.
+
+### Standard Metadata 
+
+| **Name** | **Type** | **Size** | **Example** |
+| --- | --- | --- | --- |
+| AuxiliaryInputPointer | String | variable | Group name of ancillary file list | 
+| AutomaticQualityFlag | String | variable | PASS/FAIL (of product data) |
+| BuildId | String | variable | |
+| CollectionLabel | String | variable | |
+| DataFormatType | String | variable | NCSAHDF5 |
+| DayNightFlag | String | variable | |
+| EastBoundingCoordinate | LongFloat | 8 | |
+| HDFVersionId | String | variable | 1.8.16 |
+| ImageLines | Int32 | 4 | 5632 |
+| ImageLineSpacing | Float32 | 4 | 68.754 | 
+| ImagePixels | Int32 | 4 | 5400 |
+| ImagePixelSpacing | Float32 | 4 | 65.536 |
+| InputPointer | String | variable | |
+| InstrumentShortName | String | variable | SBG |
+| LocalGranuleID | String | variable | --- |
+| LongName | String | variable | SBG |
+| InstrumentShortName | String | variable | --- |
+| LocalGranuleID | String | variable | --- |
+| LongName | String | variable | SBG |
+| NorthBoundingCoordinate | LongFloat | 8 | --- |
+| PGEName | String | variable | L2_LSTE (L2_CLOUD) |
+| PGEVersion | String | variable | |
+| PlatformLongName | String | variable | |
+| PlatformShortName | String | variable | |
+| PlatformType | String | variable | Spacecraft |
+| ProcessingLevelID | String | variable | 1 |
+| ProcessingLevelDescription | String | variable | Level 2 Land Surface Temperatures and Emissivity (Level 2 Cloud mask) |
+| ProducerAgency | String | variable | JPL |
+| ProducerInstitution | String | variable | Caltech |
+| ProductionDateTime | String | variable | |
+| ProductionLocation | String | variable | |
+| CampaignShortName | String | variable | Primary |
+| RangeBeginningDate | String | variable | |
+| CampaignShortName | String | variable | |
+| RangeBeginningDate | String | variable | |
+| RangeBeginningTime | String | variable | |
+| RangeEndingDate | String | variable | |
+| RangeEndingTime | String | variable | |
+| SceneID | String | variable | |
+| ShortName | String | variable | L2_LSTE (L2_CLOUD) |
+| SceneID | String | variable | |
+| ShortName | String | variable | |
+| SISName | String | variable | |
+| SISVersion | String | variable | |
+| SouthBoundingCoordinate | LongFloat | 8 | |
+| StartOrbitNumber | String | variable | |
+| StartOrbitNumber | String | variable | |
+| WestBoundingCoordinate | LongFloat | 8 | |
+
+*Table 3. Standard metadata included in SBG-TIR product files*
+
+### Appendix of Abbreviations and Acronyms
+
+| **Abbreviatios** | **Description** |
+| --- | --- |
+| ALEXI	| Atmospheric-Land Exchange Inversion |
+| ARS	| Agricultural Research Service |
+| ASD	| Algorithm Specifications Document |
+| ATBD	| Algorithm Theoretical Basis Document |
+| BESS | Breathing Earth System Simulator |
+| C | Celsius |
+| CCB	| Change Control Board |
+| CDR	| Critical Design Review |
+| CF	| Climate and Forecast (metadata convention) |
+| CM	| Configuration Management |
+| CONUS	| Continental United States |
+| COTS	| Commercial Off The Shelf |
+| DAAC	| Distributed Active Archive Center |
+| BOA | Bottom of Atmosphere
+| dB	| DeciBel |
+| DCN	| Document Change Notice |
+| deg	| Degrees |
+| deg/sec	| Degrees per Second |
+| DEM	| Digital Elevation Model |
+| DisALEXI	| ALEXI Disaggregation algorithm |
+| DN	| Data Number |
+| EASE	| Equal Area Scalable Earth |
+| ECI	| Earth Centered Inertial coordinate system |
+| ECR	| Earth Centered Rotating coordinate system |
+| ECS	| EOSDIS Core System |
+| EOS	| Earth Observing System |
+| EOSDIS	| EOS Data and Information System |
+| ESDIS	| Earth Science Data and Information System |
+| ESDT	| Earth Science Data Type |
+| FOV	| Field of View |
+| FSW	| Flight Software |
+| GB	| gigabytes, 109 bytes |
+| GDS	| Ground Data System |
+| GHA	| Greenwich Hour Angle |
+| GHz	| $$\text{Gigahertz, 10}^9$$ hertz |
+| GMAO	| Global Modeling and Assimilation Office |
+| GMT	| Greenwich Mean Time |
+| GPP	| Gross Primary Production |
+| GSE	| Ground Support Equipment |
+| GSFC	| Goddard Space Flight Center |
+| HDF	| Hierarchical Data Format |
+| HK	| Housekeeping (telemetry) |
+| HRSL	| Hydrology and Remote Sensing Laboratory |
+| Hz	| Hertz |
+| HSD	| Health and Status Data |
+| I&T	| Integration and Test |
+| ICD	| Interface Control Document |
+| I/O	| Input/Output |
+| IOC	| In-Orbit Checkout |
+| IPA	| Inter-Project Agreement |
+| ITAR	| International Traffic in Arms Regulation |
+| JPL	| Jet Propulsion Laboratory |
+| K	| Kelvin |
+| KHz	| Kilohertz |
+| Km	| Kilometer, 1000 meters |
+| L0 – L4	| Level 0 through Level 4 |
+| LAN	| Local Area Network |
+| LEO	| Low Earth Orbit |
+| LOE	| Level of Effort |
+| LOM	| Life of Mission |
+| LP	| Land Processes |
+| LSTE	| Land Surface Temperature and Emissivity |
+| m	| Meter |
+| MB	| Megabytes, 106 bytes |
+| Mbps	| Mega bits per second |
+| MHz	| Megahertz |
+| MMR	| Monthly Management Review |
+| MOA	| Memorandum of Agreement |
+| MOD16 | MODIS Global evapotranspiration algorithm |
+| MODIS	| Moderate Resolution Imaging Spectroradiometer |
+| MOS	| Mission Operations System |
+| m/s	| Meters per second |
+| ms	| Milliseconds |
+| MS	| Mission System |
+| NASA	| National Aeronautics and Space Administration  |
+| NCEP	| National Centers for Environmental Protection |
+| NCSA	| National Center for Supercomputing Applications |
+| netCDF	| Network Common Data Format |
+| NISN	| NASA Integrated Services Network |
+| NOAA	| National Oceanic and Atmospheric Administration |
+| OA	| Operations Agreement |
+| ODL	| Object Description Language |
+| OODT	| Object Oriented Data Technology |
+| ORR	| Operational Readiness Review |
+| ORT	| Operational Readiness Test |
+| PDR	| Preliminary Design Review |
+| percent	% | Parts per hundred |
+| PLRA | Program Level Requirements Appendix |
+| PR	| Problem Report |
+| PSD	| Product Specifications Document |
+| PT-JPL	| Priestly-Taylor-JPL |
+| PT-JPL-SM | Priestly-Taylor-JPL-Soil Moisture |
+| QA	| Quality Assurance |
+| rad	| radians |
+| RDD	| Release Description Document |
+| RFA	| Request For Action |
+| SBG	| ECOsystem Spaceborne Thermal Radiometer on Space Station |
+| S/C	| Spacecraft |
+| SCP	| Secure Copy |
+| SDP	| Software Development Plan |
+| SDS	| Science Data System |
+| sec, s	| Seconds |
+| SITP	| System Integration and Test Plan |
+| SMP	| Software Management Plan |
+| SOM	| Software Operators Manual |
+| STIC | Surface Temperature Initiated Closure model | 
+| TAI	| International Atomic Clock |
+| Tb	| Brightness Temperature |
+| TBD	| To Be Determined |
+| TBS	| To Be Specified |
+| TOA	| Top of Atmosphere |
+| TPS	| Third Party Software |
+| USDA	| United State Department of Agriculture |
+| USGS	| United States Geological Society |
+| UTC	| Coordinated Universal Time |
+| V&V	| Verification and Validation |
+| XML	| Extensible Markup Language |
+
+*Table 4. Abbreviations and acronyms used in SBG-TIR documentation and products*
