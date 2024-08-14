@@ -1,6 +1,6 @@
 # ECOSTRESS Collection 3 Data Product Algorithms
 
-This organization contains the algorithms for the ECOsystem Spaceborne Thermal Radiometer Experiment on Space Station (ECOSTRESS) mission collection 3 data products. 
+This organization will contain the algorithms for the ECOsystem Spaceborne Thermal Radiometer Experiment on Space Station (ECOSTRESS) mission collection 3 data products. 
 
 ECOSTRESS collection 3 is the precursor to the [Surface Biology and Geology Thermal Infrared (SBG-TIR) Orbiting Terrestrial Thermal Emission Radiometer (OTTER) data products](https://github.com/sbg-tir).
 
