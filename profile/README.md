@@ -8,6 +8,51 @@ ECOSTRESS collection 3 is the precursor to the [Surface Biology and Geology Ther
 
 This document will provide background information relevant to the ECOSTRESS mission and data products. 
 
+## Flow-Chart
+
+```mermaid
+flowchart TD
+L1_RAD_PGE[L1 RAD PGE]
+L2_LSTE_PGE[L2 LSTE PGE]
+L2_STARS_PGE[L2 STARS PGE]
+L3_JET_PGE[L3 JET PGE]
+
+L1_RAD_SWATH[L1 RAD Swath Product]
+L1CG_CLOUD_GRID[L1 CLOUD Gridded Product]
+L1CG_RAD_GRID[L1G RAD Gridded Product]
+L1CT_RAD_TILE[L1T RAD Tiled Product]
+
+L2G_LSTE_GRID[L2G LSTE Gridded Product]
+L2T_LSTE_TILE[L2T LSTE Tiled Product]
+
+L2T_STARS_TILE[L2T STARS Tiled Product]
+
+L3T_JET_TILE[L3T JET Tiled Product]
+L4T_ESI_TILE[L4T ESI Tiled Product]
+L4T_WUE_TILE[L4T WUE Tiled Product]
+
+L1_RAD_PGE --> L1_RAD_SWATH
+L1_RAD_PGE --> L1CG_RAD_GRID
+L1_RAD_PGE --> L1CT_RAD_TILE
+L1_RAD_PGE --> L1CG_CLOUD_GRID
+
+L1CG_RAD_GRID --> L2_LSTE_PGE
+L1CG_CLOUD_GRID --> L2_LSTE_PGE
+L2_LSTE_PGE --> L2G_LSTE_GRID
+L2_LSTE_PGE --> L2T_LSTE_TILE
+
+L2T_LSTE_TILE --> L2_STARS_PGE
+
+L2_STARS_PGE --> L2T_STARS_TILE
+
+L2T_LSTE_TILE --> L3_JET_PGE
+L2T_STARS_TILE --> L3_JET_PGE
+
+L3_JET_PGE --> L3T_JET_TILE
+L3_JET_PGE --> L4T_ESI_TILE
+L3_JET_PGE --> L4T_WUE_TILE
+```
+
 ## ECOSTRESS Data Product Algorithms
 
 The ECOSTRESS data product algorithms include:
