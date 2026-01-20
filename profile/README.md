@@ -13,7 +13,7 @@ This document will provide background information relevant to the ECOSTRESS miss
 ```mermaid
 flowchart TD
 L1B_GEO_PGE[L1B GEO PGE]
-L1_RAD_PGE[L1B RAD PGE]
+L1B_RAD_PGE[L1B RAD PGE]
 L1C_RAD_PGE[L1C RAD PGE]
 L2_LSTE_PGE[L2 LSTE PGE]
 L2_STARS_PGE[L2 STARS PGE]
@@ -28,16 +28,14 @@ L1CT_RAD_TILE["L1CT RAD Tiled Product<br>(Including Cloud)"]
 
 L2G_LSTE_GRID[L2G LSTE Gridded Product]
 L2T_LSTE_TILE[L2T LSTE Tiled Product]
-
 L2T_STARS_TILE[L2T STARS Tiled Product]
-
 L3T_JET_TILE[L3T JET Tiled Product]
 L4T_ESI_TILE[L4T ESI Tiled Product]
 L4T_WUE_TILE[L4T WUE Tiled Product]
 
 L1B_GEO_PGE --> L1B_GEO_SWATH
 
-L1_RAD_PGE --> L1_RAD_SWATH
+L1B_RAD_PGE --> L1_RAD_SWATH
 
 L1_RAD_SWATH --> L1C_RAD_PGE
 L1_RAD_SWATH --> L1B_GEO_PGE
