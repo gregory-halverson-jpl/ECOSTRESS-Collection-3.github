@@ -72,6 +72,29 @@ The ECOSTRESS data product algorithms include:
   - [Level 4 Evaporative Stress Index](https://github.com/ECOSTRESS-Collection-3/ECOv003-L3-JET)
   - [Level 4 Water Use Efficiency](https://github.com/ECOSTRESS-Collection-3/ECOv003-L3-JET)
 
+## ECOSTRESS Data Products
+
+| **Short Name** | **Long Name** |
+| --- | --- |
+| ECO_L1A_BB | ECOSTRESS Swath Black Body Instantaneous L1A Global 38 x 69 m V003 |
+| ECO_L1A_ENG | ECOSTRESS Swath Engineering Data Instantaneous L1A Global V003 |
+| ECO_L1A_PIX | ECOSTRESS Swath Pixel Data Instantaneous L1A Global 38 x 69 m V003 |
+| ECO_L1B_GEO | ECOSTRESS Swath Geolocation Instantaneous L1B Global 70 m V003 |
+| ECO_L1B_ATT | ECOSTRESS Swath Attitude and Ephemeris Instantaneous L1B Global V003 |
+| ECO_L1B_RAD | ECOSTRESS Swath Top of Atmosphere Calibrated Radiance Instantaneous L1B Global 70 m V003 |
+| ECO_L1CG_RAD | ECOSTRESS Gridded Top of Atmosphere Calibrated Radiance Instantaneous L1C Global 70 m V003 |
+| ECO_L1CT_RAD | ECOSTRESS Tiled Top of Atmosphere Calibrated Radiance Instantaneous L1C Global 70 m V003 |
+| ECO_L2G_LSTE | ECOSTRESS Gridded Land Surface Temperature and Emissivity Instantaneous L2 Global 70 m V003 |
+| ECO_L2G_CLOUD | ECOSTRESS Gridded Cloud Mask Instantaneous L2 Global 70 m V003 |
+| ECO_L2T_LSTE | ECOSTRESS Tiled Land Surface Temperature and Emissivity Instantaneous L2 Global 70 m V003 |
+| ECO_L2T_STARS | ECOSTRESS Tiled Ancillary NDVI and Albedo L2 Global 70 m V003 |
+| ECO_L3T_JET | ECOSTRESS Tiled Evapotranspiration Instantaneous and Daytime L3 Global 70 m V003 |
+| ECO_L3T_ET_ALEXI | ECOSTRESS Tiled Evapotranspiration disALEXI 24-Hour L3 CONUS 70 m V003 |
+| L3T_ETAUX | ECOSTRESS Tiled Ecosystem Auxiliary Inputs L3 Global 70 m V003 |
+| ECO_L4T_ESI | ECOSTRESS Tiled Evaporative Stress Index PT-JPL Instantaneous L4 Global 70 m V003 |
+| ECO_L4T_ESI_ALEXI | ECOSTRESS Tiled Evaporative Stress Index disALEXI 24-Hour L4 CONUS 70 m V003 |
+| ECO_L4T_WUE | ECOSTRESS Tiled Water Use Efficiency Instantaneous L4 Global 70 m V003 |
+
 ## Evapotranspiration Models
 
 The evapotranspiration models for the level 3 and 4 ecosystem products are being developed in the [JPL-Evapotranspiration-Algorithms](https://github.com/JPL-Evapotranspiration-Algorithms) organization. These models include:
